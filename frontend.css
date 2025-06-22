@@ -1,0 +1,274 @@
+/* pneumonia_style.css - Full Web UI */
+
+:root {
+  --deep-blue: #1e88e5;
+  --forest-green: #2e7d32;
+  --fire-orange: #ff6b35;
+  --soft-bg: #f8f9fa;
+  --header-bg: #ffffff;
+  --footer-bg: #eceff1;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: 0.3s;
+}
+
+body {
+  margin: 0px;
+font-family: 'Poppins', 'Roboto';
+background: url('medical.png') no-repeat center center fixed;
+background-size: cover;
+color: #333;
+}
+
+/* Header */
+.header {
+  background-color: var(--header-bg);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--deep-blue);
+  transition: color var(--transition);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--fire-orange);
+}
+
+/* Sections */
+.section {
+  padding: 70px 20px;
+  display: none;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.section.active {
+  display: block;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 0 20px;
+  line-height: 1.7;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  text-align:left;
+}
+
+.hero-content {
+  flex: 1 1 45%;
+  padding-bottom: 40px;
+  padding-top:40px;
+  background-color: rgba(255, 255, 255, 0.721);
+  box-shadow: var(--shadow);
+  border: 1px solid white;
+  padding-left:40px;
+  border-radius:10px;
+
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.cta-buttons {
+  margin-top: 20px;
+}
+
+.cta-button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-right: 10px;
+  transition: background var(--transition);
+}
+
+.primary {
+  background-color: var(--deep-blue);
+  color: white;
+}
+
+.primary:hover {
+  background-color: #1565c0;
+}
+
+.secondary {
+  background-color: white;
+  color: var(--deep-blue);
+  border: 2px solid var(--deep-blue);
+}
+
+.secondary:hover {
+  background-color: var(--deep-blue);
+  color: white;
+}
+
+/* Upload Section */
+.forecast-form {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.upload-btn {
+  background: var(--deep-blue);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  transition: background var(--transition);
+}
+
+.upload-btn:hover {
+  background: #1565c0;
+}
+
+.file-name {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.predict-btn {
+  background: var(--fire-orange);
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.predict-btn:hover {
+  background: #e25a2a;
+}
+
+.result {
+  margin-top: 35px;
+  padding: 25px;
+  background: var(--soft-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: none;
+}
+
+.result h3 {
+  color: var(--forest-green);
+  margin-bottom: 10px;
+}
+
+.result img {
+  margin-top: 15px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* About */
+.documentation {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.documentation h3 {
+  color: var(--deep-blue);
+  margin-top: 20px;
+}
+
+.documentation ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  background: var(--footer-bg);
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #4e4c4c;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
